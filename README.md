@@ -30,6 +30,8 @@ Then download the unity simulation from [this](https://github.com/udacity/self-d
 If you want to train the model by yourself, you could download [this](https://d17h27t6h515a5.cloudfront.net/topher/2016/December/584f6edd_data/data.zip) folder containing the record of a human player in the simulation or you could directly record your own gaming in the training mode of the simulation.
 
 ### Instruction
+Activate the `CarND-term1` environment on our cmd and go to the project folder.
+
 Run the `model.py` file from your cmd to train the model by taping `python model.py`
 
 Launch the trained model to drive the simulation from your cmd by taping `python drive.py model.h5`
