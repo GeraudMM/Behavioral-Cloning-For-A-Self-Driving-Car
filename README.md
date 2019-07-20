@@ -7,6 +7,7 @@ In this project, we'll train a Convolutional Neural Network to drive a car, usin
 
 ### Introduction
 
+Here, we will use the Udacity simulation of a car on a track to colloct data of how the human drive. Then, once we have enough data we will train our Neural Network to copy the human behavior with only the images for input and the speed and angle choose by the human player to help the neural network to generalize on diffenrent images.
 
 ### Getting Started
 
