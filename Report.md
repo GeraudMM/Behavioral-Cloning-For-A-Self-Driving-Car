@@ -3,8 +3,8 @@
 This report come as part of the Udacity Nanodegree on Self Driving Car Engineering.
 
 ### Introduction
-In this Project, we will try to sort the German Traffic Signs from [this](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/traffic-signs-data.zip) database using a Convolutional Neural Network.
 
+In this project, we will use the Udacity simulation of a car on a track to colloct data of how the human drive. Then, once we have enough data we will train our Neural Network to copy the human behavior with only the images for input and the speed and angle choose by the human player to help the neural network to generalize on diffenrent images.
 
 
 ### Description
