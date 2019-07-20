@@ -32,8 +32,8 @@ If you want to train the model by yourself, you could download [this](https://d1
 ### Instruction
 Run the `model.py` file from your cmd to train the model by taping `python model.py`
 
-Lauch the trained model to drive the simulation from your cmd by taping `python drive.py model.h5`
+Launch the trained model to drive the simulation from your cmd by taping `python drive.py model.h5`
 
-Finaly, lauch the `.exe` file in the simulation folder and choose autonomous mode to see the car driving itself.
+Finaly, launch the `.exe` file in the simulation folder and choose autonomous mode to see the car driving itself.
 
 Check also the `Report.md` for explaination on the algorithm.
