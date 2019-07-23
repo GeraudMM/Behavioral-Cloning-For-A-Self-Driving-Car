@@ -1,13 +1,13 @@
 [image1]: example.gif "Intro GIF"
 
 # Behavioral-Coling-For-A-Self-Driving-Car
-In this project, we'll train a Convolutional Neural Network to drive a car, using data made by a human player in a simulation.
+In this project, we train a Convolutional Neural Network to drive a car, using data made by a human player in a simulation. We can see the results in the gif bellow:
 
 ![Driving Example][image1] 
 
 ### Introduction
 
-Here, we will use the Udacity simulation of a car on a track to colloct data of how the human drive. Then, once we have enough data we will train our Neural Network to copy the human behavior with only the images for input and the speed and angle choose by the human player to help the neural network to generalize on diffenrent images.
+  We will use the Udacity simulation of a car on a track to collect data on how the human drive. Then, once we have enough data we will train our Neural Network to copy the human behavior with only the images for input and the speed and angle choose by the human player to help the neural network to generalize on diffenrent images.
 
 ### Getting Started
 
