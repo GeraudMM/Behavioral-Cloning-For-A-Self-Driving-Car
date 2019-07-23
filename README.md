@@ -1,4 +1,4 @@
-[image1]: gif.png "Intro GIF"
+[image1]: example.gif "Intro GIF"
 
 # Behavioral-Coling-For-A-Self-Driving-Car
 In this project, we'll train a Convolutional Neural Network to drive a car, using data made by a human player in a simulation.
