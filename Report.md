@@ -1,5 +1,5 @@
 [image1]: example.png "Trained Agent"
-[image2]: data_exploration.png "data_exploration"
+[image2]: rdm_images.png "philippe"
 This report come as part of the Udacity Nanodegree on Self Driving Car Engineering.
 
 ### Introduction
@@ -20,6 +20,9 @@ In order to be able to do behavioral cloning, we have create a python file `mode
 1. Load the Data and augment it
 
 To start, we have to load the data from the folder containing the images and the cvs file. Here, I tried to create my own data folder, but I had worst results with my run records and so I chose to form my model with the gaven data.
+
+Here you can see some examples of the pictures taken by the car and the steering angle corresponding: 
+![cvds][image2]
 
 Then we create the `generator()` function which will allow us, thanks to the keras methode `fit_generator()`, to load the data only batch after batch and not all in once. In this project, it wasn't necessary but allow us to be more memory efficient.
 
