@@ -9,41 +9,34 @@ In this project, we will use the Udacity simulation of a car on a track to collo
 
 ### Description
 
-In order to be able to give any image of a traffic sign to our network and, we hope, have a good prediction, we will proceed with these three main parts of the code:
+In order to be able to do behavioral cloning, we have create a python file `model.py`, which contain 2 main parts:
 
-* Load the Data and explore it
-* Design and Test a Model Architecture
-* Test our Model on New Images
+* Load the Data and augment it
+* Model Architecture
 
-All the code for each step of this algorithm is contained in the `Traffic_Sign_Classifier.ipynb` Notebook. We'll go through every step one by one.
 
-1. Load the Data and explore it
+1. Load the Data and augment it
 
-In this first part, we first load the data from the pickle files and then explore them at random to see what they look like and to check that the labels are implemented correctly. To do this, I wrote all the label in the 'signs' list so that I could write the traffic sign label directly on the top of each image as we can see below:
+To begin, we have to load the data from the folder containing the images and the cvs file. Here, I tried to create my own data folder but I had worst results with my run record so I choose to train my model with the gaven data.
 
-![data_exploration][image2] 
+Then we create the `generator()` function which will allow us, thanks to the keras methode `fit_generator()`, to load the data only batch after batch and not all in once. In this project, it wasn't necessary but allow you to be more memory efficient.
 
-2. Design and Test a Model Architecture
+Once we have load a batch (I choose BATCH_SIZE = 8), we can have for each line of the cvs file 3 images from the left, centered and right camera, then we can add +0.35 to the left steering and substract 0.35 to the right steering, this will allow us to obtain that the car will go back to the center of the road if it began to take a wrong steering angle. Finally we can flip each images and multiply by (-1) each steering angle to have twice more image. The problem here is however that it would have been better to do this data augmentation before selecting randomly the images for each batch, but as we hadn't dowloaded them yet it was harder to do an algorithm to solve this.
 
-In this section, we begin by processing the data. The size of each image is already (32*32) but in order to have better results, we gray_scal our images and then we normalize each of their pixels with the formula: x=(x-128)/128.
+Finally we got our two array, one (X_train), containing the 8*3*2 images selected ans the other one (y_test) containing the corresponding steering angle for each image.
 
-Then, we choose to modify the LeNet() model for our neural network in order to obtain better results with our data. For example, here we decide to have a depth of  9 and 21  for the first and second convolutional layers. We also improved the number of weights of the fully connected layer and decided to add a fourth one.
 
-With this modifications, we tuned the parameters as follow:
+2. Model Architecture
 
-* Learning_rate = 0.001
-* EPOCHS = 20
-* BATCH_SIZE = 128
+In this section, we choose to take, as in the presentation, the network architecture published by the autonomous vehicle team at NVIDIA. Then we modified the following points:
 
-and obtain an accuracy of 0.95 for the validation data.
+First, we resize the images by deleting the pixels higher in the top of the image and in the very bottom two in order to have only access to the most important and to reduce the calcul time.
+Then, we normalized our data between -0.5 and 0.5.
+And finally we added a dropout layer(0.2 of keep_prob) befor the Dense(10) one.
 
-3. Test our Model on New Images
+Thanks to that and the GPU mode in the worspace, we are able to train our network in just a few minutes which allow us to test a lot of different configurations. 
+All in all, with the paramters I gave all along the report, the model was able to complete the first track.
 
-Finally, in order to better understand the model and to be sure that it will work with real images, we choose some images of German traffic signs on the Internet, resize them, scale them, grey_scale and normalize them and we obtain the following results:
-
-![Traffic Sign Example][image1] 
-
-As you can see here the model had a good prediction for 4 out of 5 images wich is a good beginning but show that improvement is still needed.
 
 ### Reflexion
 
