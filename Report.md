@@ -15,6 +15,8 @@ In order to be able to do behavioral cloning, we have create a python file `mode
 * Model Architecture
 
 
+
+
 1. Load the Data and augment it
 
 To begin, we have to load the data from the folder containing the images and the cvs file. Here, I tried to create my own data folder but I had worst results with my run record so I choose to train my model with the gaven data.
@@ -40,9 +42,11 @@ All in all, with the paramters I gave all along the report, the model was able t
 
 ### Reflexion
 
-Now that our model works pretty well for a majority of image, we have to do the hardest work which is to reach for the last 5-10% of good prediction. 
+Now that our model works pretty well for the first track, it would be great to try to make it more robust in different environment like in the second track for example.
 
-I think there are at least 2 main points on which we could improve the efficience of the algorithm:
+I think there are at least 2 main points on which we could improve the efficience of our network:
 
-- At first, We could try to have a better processing of our data, which mean that we could for example add noise or gaussian_blur on our inputs image, or also feed the model with the RGB color space.
-- Finally, using the [Keras](https://keras.io) library, we could have a simpler implementation of our model and then it would be easier to improve it four our data classification.
+- At first, as I explained before, it would be better to augment the data before putting it in a batch in order to not have to much corelated images in the same batches.
+- Secondly, we should try to collect a lot more images of the two track in order to have a robust network that could easily play on both track and maybe even more.
+
+The problem, though, with this kind of algorithm is that it is hardly predictible, and if it is not a problem for traffic sign recognition, it can be one for running a car. At least with only this model to predict what the car should do.
