@@ -1,6 +1,6 @@
 [image1]: example.gif "Intro GIF"
 
-# Behavioral-Cloning-For-A-Self-Driving-Car
+# Behavioral Cloning For A Self Driving Car
 In this project, we train a Convolutional Neural Network to drive a car, using data made by a human player in a simulation. We can see the results in the gif bellow:
 
 ![Driving Example][image1] 
